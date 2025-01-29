@@ -23,7 +23,7 @@ app.post('/cadastraUsuario', (req, res) => {
 })
 
 app.get('/lista', (req, res) => {
-    fs.readdir(__dirname, (err, files) => {
+    fs.readdir(pasta, (err, files) => {
         if (err) {
             console.log(err);
             res.send({erro: true, msg: "Erro ao acessar a lista de usuários."});
